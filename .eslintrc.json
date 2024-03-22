@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "rules": {
+    "eslint no-undef": "off",
+    "no-unused-vars": "off",
+    "ethers": false
+  },
+
+  "globals": {
+    "ethers": "readonly"
+  }
+}
