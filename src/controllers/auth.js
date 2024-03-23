@@ -15,10 +15,10 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
 
     if (!user && isMatch) {
         return next(new ErrorResponse('Invalid Credentials', 401));
-    }
+    };
     
 
-    const token = user.generateJwtToken()
+    const token = user.generateJwtToken();
     
     res.status(200).json({
         success: true,

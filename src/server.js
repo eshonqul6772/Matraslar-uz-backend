@@ -30,10 +30,15 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 
-connectDB().then(() => console.log('MONGO-DB_RUN'.bold));
-
-initializeUsers().then(() => {
-    app.listen(PORT, () => {
-        console.log(`server running in ${process.env.NODE_ENV} mode on port:  ${PORT}`.white.bold)
+connectDB().then(() => {
+   try{
+    initializeUsers().then(() => {
+        app.listen(PORT, () => {
+            console.log(`server running in ${process.env.NODE_ENV} mode on port:  ${PORT}`.white.bold)
+        });
     });
+   }catch(err){
+    console.log(err.message, "Error no connected")
+   }
 });
+

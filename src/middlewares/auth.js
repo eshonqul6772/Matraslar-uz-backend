@@ -1,7 +1,8 @@
-const jwt = require('jsonwebtoken')
-const asyncHandler = require('./async')
-const ErrorResponse = require('../utils/ErrorResponse')
-const User = require('../models/user')
+const jwt = require('jsonwebtoken');
+
+const asyncHandler = require('./async');
+const ErrorResponse = require('../utils/ErrorResponse');
+const User = require('../models/user');
 
 exports.protected = asyncHandler(async (req, res, next) => { 
     const token = req.headers.authorization.split(' ')[1]
