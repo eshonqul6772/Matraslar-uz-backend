@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema({
     },
     username: {
         type: String,
+        unique: true,
         required: true
     },
     password: {
@@ -20,14 +21,20 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 4
     },
+    role:{
+        type:String,
+        enum:["ADMIN", "USER"],
+        required:true
+    },
     status: {
-        type: Boolean,
+        type: String,
+        enum:["ACTIVE","INACTIVE"],
         default: true
     }
-}, {timestamps: true})
+}, {timestamps: true, versionKey:false})
 
 
-userSchema.pre('save', async function (next) {
+userSchema.pre('save',async function (next) {
     if (!this.isModified('password')) {
         next()
     }
@@ -36,7 +43,7 @@ userSchema.pre('save', async function (next) {
 });
 
 userSchema.methods.generateJwtToken = function () {
-    return jwt.sign({id: this._id, email: this.email}, process.env.JWT_TOKEN_SECRET, {
+    return jwt.sign({id: this._id, username: this.username}, process.env.JWT_TOKEN_SECRET, {
         expiresIn: process.env.JWT_EXPIRE
     })
 };
@@ -44,6 +51,5 @@ userSchema.methods.generateJwtToken = function () {
 userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password)
 }
-
 
 module.exports = mongoose.model('User', userSchema)

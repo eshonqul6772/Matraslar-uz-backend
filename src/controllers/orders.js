@@ -46,7 +46,7 @@ exports.getOrders = asyncHandler(async (req, res, next) => {
     })
 });
 
-exports.getOrdertById = asyncHandler(async(req,res, next)=>{
+exports.getOrderById = asyncHandler(async(req, res, next)=>{
 
     console.log(req.params.id)
 

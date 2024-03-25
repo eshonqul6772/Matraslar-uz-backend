@@ -5,10 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fbd9c2-726a-4c18-beb5-4f5c33e3c822" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/categories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b0041a5-3299-4dfb-88ae-6a67fc3d85d0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aec55a2a-43e0-4ddb-b0aa-19fa86b57d1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aec55a2a-43e0-4ddb-b0aa-19fa86b57d1e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/admin/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ErrorResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ErrorResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,34 +62,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "12.22.9",
-    "javascript.nodejs.core.library.typings.version": "12.20.55",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/eslint",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/prettier",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "ts.external.directory.path": "/snap/webstorm/366/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;12.22.9&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;12.20.55&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-uz-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/366/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -102,6 +124,10 @@
       <workItem from="1711192810593" duration="256000" />
       <workItem from="1711193081846" duration="216000" />
       <workItem from="1711198194635" duration="436000" />
+      <workItem from="1711350949416" duration="3316000" />
+      <workItem from="1711357327580" duration="9059000" />
+      <workItem from="1711366553231" duration="3051000" />
+      <workItem from="1711382871821" duration="81000" />
     </task>
     <servers />
   </component>
