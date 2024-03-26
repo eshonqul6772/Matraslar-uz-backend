@@ -1,26 +1,19 @@
 const mongoose = require('mongoose');
 
+const reqString = { type: String, require: true }
+
 const orderSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  productName: {
-    type: String,
-    required: true,
-  },
+  name: reqString,
+  phone: reqString,
+  productName: reqString,
   count: {
     type: Number,
     required: true,
   },
   status: {
     type: String,
-    enum:["ACTIVE","INACTIVE"],
-    default: true
+    enum: ["ACTIVE", "INACTIVE"],
+    default: "ACTIVE"
   }
 
 }, { timestamps: true, versionKey: false });

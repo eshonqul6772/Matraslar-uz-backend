@@ -2,7 +2,6 @@ const User = require('../models/user');
 const ErrorResponse = require('../utils/ErrorResponse');
 const asyncHandler = require('../middlewares/async');
 
-
 exports.loginUser = asyncHandler(async (req, res, next) => {
     const {username, password} = req.body;
 

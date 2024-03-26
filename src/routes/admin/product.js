@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const multer = require('multer');
 
 const {
   createProduct,
@@ -8,14 +9,18 @@ const {
   updateProduct,
 } = require('../../controllers/products');
 const { protected } = require('../../middlewares/auth');
-const { getCategoryById } = require('../../controllers/category');
+const asyncHandler = require('../../middlewares/async');
 
-router.get('/products', protected, getProduct);
-router.get('/products/:id', protected, getCategoryById);
+const upload = multer({ dest: 'uploads/' });
+
+router.post('/products', upload.single('images'),createProduct);
+
+router.get('/products',  protected,  getProduct);
+router.get('/products/:id', protected, getProductById);
 router.put('/products/:id', protected, updateProduct);
-router.post('/products', protected, createProduct);
 router.delete('/products/:id', protected, removeProduct);
 
 
 module.exports = router;
+
 

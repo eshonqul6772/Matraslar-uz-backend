@@ -5,23 +5,37 @@ const asyncHandler = require('../middlewares/async');
 
 
 exports.createProduct = asyncHandler(async (req, res, next) => {
-  const category = await Category.findOne({ name: req.body.name });
-  const { productName, price, mess, size, status } = req.body;
+  const category = await Category.findOne({ category: 'name' });
 
-  if (!category && !status) {
-    next(ErrorResponse('invalid category or statusType', 400));
+  if(!category){
+    next(new ErrorResponse('category nod found', 400))
   }
 
-  const newCategory = new Category({
-    productName, price, mess, size, status,
+  const newProduct =await Product.create({
+    name:req.body.name,
+    weight:req.body.weight,
+    images: '/uploads' + req.file.filename,
+    category: "6601adba795edd2a4de26927",
+    status:req.body.status,
+    size:req.body.size,
+    description:req.body.description,
+    cost:req.body.cost,
+    newCost:req.body.newCost,
   });
 
-  const saveCategory = await newCategory.save();
+  await Category.findOneAndUpdate({ category: req.body.category },
+    {
+        $push: {
+            planets: newProduct._id
+        }
+    },
+    { new: true, upsert: true })
 
   res.status(201).json({
-    success: true, data: saveCategory,
+    success: true, data: newProduct,
   });
 });
+
 
 exports.getProduct = asyncHandler(async (req, res, next) => {
   const pageLimit = process.env.DEFAULT_PAGE_LIMIT || 5;
@@ -64,7 +78,7 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
     name: req.body.name, phone: req.body.phone, productName: req.body.productName, count: req.body.count,
   };
 
-  const updatedProduct = await Category.findByIdAndUpdate(req.params.id, editProduct, {
+  const updatedProduct = await Product.findByIdAndUpdate(req.params.id, editProduct, {
     new: true, runValidators: true,
   });
 
@@ -75,14 +89,13 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
 
 });
 
-exports.removeProduct = asyncHandler(async (req, res, next) => {
-    await Category.findByIdAndDelete(req.params.id);
 
-    res.status(200).json({
-      success: true,
-      massage: 'success delete',
-    });
-  },
-);
+exports.removeProduct = asyncHandler(async (req, res, next) => {
+  await Product.findByIdAndDelete(req.params.id);
+
+  res.status(200).json({
+    success: true, massage: 'success delete',
+  });
+});
 
 

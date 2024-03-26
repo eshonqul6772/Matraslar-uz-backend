@@ -4,10 +4,10 @@ const colors = require('colors');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const bodyParser =  require("body-parser")
 
 const connectDB = require('./config/db.js');
 const errorHandler = require('./middlewares/error.js');
-// const initializeUsers = require('./controllers/auth');
 
 const router = require('./routes');
 
@@ -18,6 +18,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
+
 
 app.use(router);
 app.use(errorHandler);
@@ -36,6 +41,5 @@ connectDB().then(() => {
   } catch (err) {
     console.log(err.message, 'Error no connected');
   }
-
 });
 

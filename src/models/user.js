@@ -2,15 +2,11 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const reqString = { type: String, require: true }
+
 const userSchema = new mongoose.Schema({
-    firstName:{
-        type: String,
-        required: true
-    },
-    lastName: {
-        type: String,
-        required: true
-    },
+    firstName: reqString,
+    lastName: reqString,
     username: {
         type: String,
         unique: true,
@@ -21,20 +17,20 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 4
     },
-    role:{
-        type:String,
-        enum:["ADMIN", "USER"],
-        required:true
+    role: {
+        type: String,
+        enum: ["ADMIN", "USER"],
+        required: true
     },
     status: {
         type: String,
-        enum:["ACTIVE","INACTIVE"],
+        enum: ["ACTIVE", "INACTIVE"],
         default: true
     }
-}, {timestamps: true, versionKey:false})
+}, { timestamps: true, versionKey: false })
 
 
-userSchema.pre('save',async function (next) {
+userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
         next()
     }
@@ -43,7 +39,7 @@ userSchema.pre('save',async function (next) {
 });
 
 userSchema.methods.generateJwtToken = function () {
-    return jwt.sign({id: this._id, username: this.username}, process.env.JWT_TOKEN_SECRET, {
+    return jwt.sign({ id: this._id, username: this.username }, process.env.JWT_TOKEN_SECRET, {
         expiresIn: process.env.JWT_EXPIRE
     })
 };
