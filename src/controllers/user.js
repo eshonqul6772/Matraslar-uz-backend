@@ -1,31 +1,7 @@
 const User = require('../models/user');
 
-const ErrorResponse = require('../utils/ErrorResponse');
 const asyncHandler = require('../middlewares/async');
 
-exports.createUser = asyncHandler(async (req, res, next) => {
-  const { firstName, lastName, username, password, role } = req.body;
-
-  if (!firstName || !lastName || !username || !password || !role) {
-    return next(new ErrorResponse('Please provide first name, last name, username and password', 400));
-  }
-
-  const user = await User.findOne({ username });
-
-  if (user) {
-    return next(new ErrorResponse('User already exists', 400));
-  }
-
-  const newUser = new User({
-    firstName, lastName, username, password, role,
-  });
-
-  const savedUser = await newUser.save();
-
-  res.status(201).json({
-    success: true, data: savedUser,
-  });
-});
 
 exports.getUser = asyncHandler(async (req, res, next) => {
   const pageLimit = process.env.DEFAULT_PAGE_LIMIT || 5;

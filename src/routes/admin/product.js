@@ -8,17 +8,15 @@ const {
   getProductById,
   updateProduct,
 } = require('../../controllers/products');
-const { protected } = require('../../middlewares/auth');
-const asyncHandler = require('../../middlewares/async');
+const { checkAuth } = require('../../middlewares/auth');
+const { validateProducts } = require('../../middlewares/validate');
+const upload = require('../../utils/fileUploader');
 
-const upload = multer({ dest: 'uploads/' });
-
-router.post('/products', upload.single('images'),createProduct);
-
-router.get('/products',  protected,  getProduct);
-router.get('/products/:id', protected, getProductById);
-router.put('/products/:id', protected, updateProduct);
-router.delete('/products/:id', protected, removeProduct);
+router.post('/products/:id', checkAuth, upload.single('images'), validateProducts, createProduct);
+router.get('/products', checkAuth, validateProducts, getProduct);
+router.get('/products/:id', checkAuth, validateProducts, getProductById);
+router.put('/products/:id', checkAuth, validateProducts, updateProduct);
+router.delete('/products/:id', checkAuth, validateProducts, removeProduct);
 
 
 module.exports = router;

@@ -7,13 +7,14 @@ const {
   getCategoryById,
   updateCategory,
 } = require('../../controllers/category');
-const { protected } = require('../../middlewares/auth');
+const { checkAuth } = require('../../middlewares/auth');
+const {validateCategory} = require("../../middlewares/validate");
 
-router.get('/category', protected, getCategory);
-router.get('/category/:id', protected, getCategoryById);
-router.put('/category/:id', protected, updateCategory);
-router.post('/category', protected, createCategory);
-router.delete('/category/:id', protected, removeCategory);
+router.get('/category', checkAuth,validateCategory, getCategory);
+router.get('/category/:id', checkAuth,validateCategory, getCategoryById);
+router.put('/category/:id', checkAuth,validateCategory, updateCategory);
+router.post('/category', checkAuth,validateCategory, createCategory);
+router.delete('/category/:id', checkAuth,validateCategory, removeCategory);
 
 
 module.exports = router;

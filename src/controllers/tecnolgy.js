@@ -1,9 +1,9 @@
-const Tecnolgy = require("../models/Technologies");
+const Technology = require("../models/Technologies");
 
 const ErrorResponse = require("../utils/ErrorResponse");
 const asyncHandler = require('../middlewares/async');
 
-exports.createTecnolgy = asyncHandler(async (req, res, next) => {
+exports.createTechnology = asyncHandler(async (req, res, next) => {
 
     const { name, thumbnail, link, description, status } = req.body;
 
@@ -11,7 +11,7 @@ exports.createTecnolgy = asyncHandler(async (req, res, next) => {
         next(new ErrorResponse("invalid plaoud data", 400));
     }
 
-    const newTecnolgy = new Tecnolgy({
+    const newTechnology = new Technology({
         name,
         thumbnail,
         link,
@@ -19,21 +19,21 @@ exports.createTecnolgy = asyncHandler(async (req, res, next) => {
         status
     })
 
-    const saveTecnolgy = await newTecnolgy.save()
+    const saveTechnology = await newTechnology.save()
 
     res.status(201).json({
         success: true,
-        data: saveTecnolgy
+        data: saveTechnology
     })
 });
 
-exports.getTecnolgy = asyncHandler(async (req, res, next) => {
+exports.getTechnology = asyncHandler(async (req, res, next) => {
     const pageLimit = process.env.DEFAULT_PAGE_LIMIT || 5;
     const limit = parseInt(req.query.limit || pageLimit);
     const page = parseInt(req.query.page || 1);
-    const total = await Tecnolgy.countDocuments();
+    const total = await Technology.countDocuments();
 
-    const products = await Tecnolgy.find()
+    const products = await Technology.find()
         .skip((page * limit) - limit)
         .limit(limit);
 
@@ -47,29 +47,19 @@ exports.getTecnolgy = asyncHandler(async (req, res, next) => {
 });
 
 
-exports.getTecnolgyById = asyncHandler(async (req, res, next) => {
-    const tecnolgy = await Tecnolgy.findById(req.params.id);
-
-    console.log(req.params.id)
-
-    if (!tecnolgy) {
-        next(new ErrorResponse("No data found with this id", 404))
-    }
+exports.getTechnologyById = asyncHandler(async (req, res, next) => {
+    const technology = await Technology.findById(req.params.id);
 
     res.status(200).json({
         success: true,
-        data: tecnolgy
+        data: technology
     })
 });
 
-exports.updateTecnolgy = asyncHandler(async (req,res,next)=>{
-    const tecnolgy = await Tecnolgy.findById(req.params.id);
+exports.updateTechnology = asyncHandler(async (req, res, next)=>{
+    const technology = await Technology.findById(req.params.id);
 
-    if(!tecnolgy){
-        next(new ErrorResponse("No data found with this id", 404))
-    };
-
-    const editTecnolgy = {
+    const editTechnology = {
         name:req.body.name,
         thumbnail:req.body.thumbnail,
         link:req.body.link,
@@ -77,22 +67,18 @@ exports.updateTecnolgy = asyncHandler(async (req,res,next)=>{
         status:req.body.status
     };
 
-    const updateTecnolgy = await Tecnolgy.findByIdAndUpdate(req.params.id, editTecnolgy, {
+    const updatechnology = await Technology.findByIdAndUpdate(req.params.id, editTechnology, {
             new:true
     });
 
     res.status(201).json({
         success:true,
-        data:updateTecnolgy
+        data:updatechnology
     })
 });
 
-exports.removeTecnolgy = asyncHandler(async (req,res, next)=>{
-    const tecnolgy = await Tecnolgy.findByIdAndDelete(req.params.id);
-
-    if(!tecnolgy){
-        next(new ErrorResponse("No data found with this id", 404))
-    };
+exports.removeTechnology = asyncHandler(async (req, res, next)=>{
+    const echnology = await Technology.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
         success:true,

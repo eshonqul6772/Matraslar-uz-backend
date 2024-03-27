@@ -8,7 +8,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
   const category = await Category.findOne({ category: 'name' });
 
   if(!category){
-    next(new ErrorResponse('category nod found', 400))
+    next(new ErrorResponse('category nod found', 403))
   }
 
   const newProduct =await Product.create({
@@ -23,13 +23,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
     newCost:req.body.newCost,
   });
 
-  await Category.findOneAndUpdate({ category: req.body.category },
-    {
-        $push: {
-            planets: newProduct._id
-        }
-    },
-    { new: true, upsert: true })
+
 
   res.status(201).json({
     success: true, data: newProduct,

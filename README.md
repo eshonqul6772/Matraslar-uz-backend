@@ -1,8 +1,5 @@
-Matraslar uz backen project 
-Rest full api
+### `npm run dev`
 
-node v18.16.0
+Runs the app in the development mode.\
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
-npm install 
-
-npm run dev

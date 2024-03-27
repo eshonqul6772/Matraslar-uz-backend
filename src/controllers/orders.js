@@ -8,10 +8,6 @@ const asyncHandler = require('../middlewares/async');
 exports.createOrder = asyncHandler(async (req, res, next) => {
     const { name, phone, productName, count } = req.body;
 
-    if (!name || !phone || !productName || !count) {
-        return next(new ErrorResponse('Please provide name, phone, productName and count', 400));
-    }
-
     const newOrder = new Orders({
         name,
         phone,
@@ -48,12 +44,11 @@ exports.getOrders = asyncHandler(async (req, res, next) => {
 
 exports.getOrderById = asyncHandler(async(req, res, next)=>{
 
-    console.log(req.params.id)
-
     const order = await Orders.findById(req.params.id)
     if(!order){
         return next(new ErrorResponse('Order not found', 404))
     }
+
     res.status(200).json({
         success: true,
         data: order

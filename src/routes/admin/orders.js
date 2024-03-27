@@ -1,10 +1,11 @@
 const router = require('express').Router();
 
 const {getOrders, getOrderById, updateOrder} = require('../../controllers/orders.js');
-const { protected } = require('../../middlewares/auth');
+const { checkAuth } = require('../../middlewares/auth');
+const { validateOrders } = require('../../middlewares/validate')
 
-router.get('/orders', protected, getOrders);
-router.get('/orders/:id', protected, getOrderById);
-router.put('/orders/:id', protected, updateOrder)
+router.get('/orders', checkAuth,validateOrders, getOrders);
+router.get('/orders/:id', checkAuth, validateOrders, getOrderById);
+router.put('/orders/:id', checkAuth, validateOrders, updateOrder)
 
 module.exports = router;

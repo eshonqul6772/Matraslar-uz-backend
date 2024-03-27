@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const asyncHandler = require('./async');
 const ErrorResponse = require('../utils/ErrorResponse');
 
-exports.protected = asyncHandler(async (req, res, next) => {
+exports.checkAuth = asyncHandler(async (req, res, next) => {
   const token = req.headers.authorization.split(' ')[1];
 
   if (!token) {

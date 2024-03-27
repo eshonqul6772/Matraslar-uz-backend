@@ -1,19 +1,13 @@
 const Category = require('../models/categories');
 
 const ErrorResponse = require('../utils/ErrorResponse');
-const asyncHeader = require('../middlewares/async');
 const asyncHandler = require('../middlewares/async');
 
 
-exports.createCategory = asyncHeader(async (req, res, next) => {
-  const { category, status } = req.body;
-
-  if (!category && !status) {
-    next(ErrorResponse('invalid category or statusType', 400));
-  }
+exports.createCategory = asyncHandler(async (req, res, next) => {
 
   const newCategory = new Category({
-    category, status,
+    category:req.body.category, status,
   });
 
   const saveCategory = await newCategory.save();
@@ -45,7 +39,7 @@ exports.getCategory = asyncHandler(async (req, res, next) => {
 exports.getCategoryById = asyncHandler(async (req, res, next) => {
   const category = await Category.findById(req.params.id);
   if (!category) {
-    return next(new ErrorResponse('Order not found', 404));
+    return next(new ErrorResponse('Category not found', 404));
   }
   res.status(200).json({
     success: true, data: category,
@@ -57,18 +51,17 @@ exports.updateCategory = asyncHandler(async (req, res, next) => {
   const category = await Category.findById(req.params.id);
 
   if (!category) {
-    return next(new ErrorResponse('Order not found', 404));
+    return next(new ErrorResponse('Order not found', 400));
   }
 
   const editCategory = {
-    name: req.body.name, phone: req.body.phone, productName: req.body.productName, count: req.body.count,
+    category:req.body.category,
+    status:req.body.status
   };
 
   const updatedCategory = await Category.findByIdAndUpdate(req.params.id, editCategory, {
     new: true, runValidators: true,
   });
-  console.log(updatedCategory);
-
 
   res.status(200).json({
     success: true, data: updatedCategory,
@@ -76,7 +69,7 @@ exports.updateCategory = asyncHandler(async (req, res, next) => {
 
 });
 
-exports.removeCategory = asyncHeader(async (req, res, next) => {
+exports.removeCategory = asyncHandler(async (req, res, next) => {
     await Category.findByIdAndDelete(req.params.id);
 
     res.status(200).json({

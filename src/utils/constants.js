@@ -1,0 +1,4 @@
+exports.STATUS_TYPE ={
+  ACTIVE:"ACTIVE",
+  INACTIVE:"INACTIVE"
+}

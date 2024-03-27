@@ -7,7 +7,6 @@ const morgan = require('morgan');
 const bodyParser =  require("body-parser")
 
 const connectDB = require('./config/db.js');
-const errorHandler = require('./middlewares/error.js');
 
 const router = require('./routes');
 
@@ -25,7 +24,6 @@ app.use(bodyParser.json());
 
 
 app.use(router);
-app.use(errorHandler);
 app.use(express.static(path.join(__dirname, 'public')));
 
 

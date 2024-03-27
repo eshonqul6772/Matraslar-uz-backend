@@ -1,14 +1,14 @@
 const router = require('express').Router();
 
-const {createTecnolgy,getTecnolgy,getTecnolgyById, updateTecnolgy,removeTecnolgy  } = require('../../controllers/tecnolgy.js');
-const { protected } = require('../../middlewares/auth');
+const {createTechnology,getTechnology,getTechnologyById, updateTechnology,removeTechnology  } = require('../../controllers/tecnolgy.js');
+const { checkAuth } = require('../../middlewares/auth');
 
 
-router.get('/technology', protected, getTecnolgy);
-router.get('/technology/:id', protected, getTecnolgyById);
-router.post('/technology', protected, createTecnolgy);
-router.put('/technology/:id', protected, updateTecnolgy);
-router.delete('/technology/:id', protected, removeTecnolgy);
+router.get('/technology', checkAuth, getTechnology);
+router.get('/technology/:id', checkAuth, getTechnologyById);
+router.post('/technology', checkAuth, createTechnology);
+router.put('/technology/:id', checkAuth, updateTechnology);
+router.delete('/technology/:id', checkAuth, removeTechnology);
 
 
 module.exports = router;

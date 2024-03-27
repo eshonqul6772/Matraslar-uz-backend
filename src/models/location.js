@@ -6,7 +6,7 @@ const mongoose =  require("mongoose");
         address:reqString,
         images:reqString,
         location:reqString,
-        descrition:reqString,
+        description:reqString,
         status:{
             type:String,
             enum:["ACTIVE", "INACTIVE"],
