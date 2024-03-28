@@ -1,5 +1,6 @@
 const Contact = require('../models/contact');
 const asyncHandler = require('../middlewares/async');
+const { string } = require('joi');
 
 
 exports.getContact = asyncHandler(async (req, res) => {
@@ -34,3 +35,13 @@ exports.createContact = asyncHandler(async (req, res) => {
     success: true, data: saveContact,
   });
 });
+
+
+exports.removeContact = asyncHandler(async (req,res, next)=>{
+    await Contact.findByIdAndDelete(req.params.id)
+
+    res.status(201).json({
+      success:true,
+      message:'success delete'
+    })
+})

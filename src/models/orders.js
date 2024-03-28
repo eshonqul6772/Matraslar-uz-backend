@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { STATUS_TYPE } = require('../utils/constants');
 
 const reqString = { type: String, require: true }
 
@@ -12,9 +13,9 @@ const orderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["ACTIVE", "INACTIVE"],
-    default: "ACTIVE"
-  }
+    enum: Object.values(STATUS_TYPE),
+    default: STATUS_TYPE.ACTIVE,
+  },
 
 }, { timestamps: true, versionKey: false });
 

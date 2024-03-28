@@ -5,25 +5,32 @@ const asyncHandler = require('../middlewares/async');
 
 
 exports.createProduct = asyncHandler(async (req, res, next) => {
-  const category = await Category.findOne({ category: 'name' });
+  const category = await Category.findOne({ category: req.body.category });
 
   if(!category){
     next(new ErrorResponse('category nod found', 403))
   }
 
+  console.log(req.body)
+
+  console.log("Dwwdedwe")
+
   const newProduct =await Product.create({
     name:req.body.name,
-    weight:req.body.weight,
+    category: category._id,
     images: '/uploads' + req.file.filename,
-    category: "6601adba795edd2a4de26927",
-    status:req.body.status,
+    weight:req.body.weight,
+    warranty:req.body.warranty,
     size:req.body.size,
+    capacity:req.body.capacity,
     description:req.body.description,
     cost:req.body.cost,
     newCost:req.body.newCost,
+    discount:req.body.discount,
+    new:req.body.new,
+    status:req.body.status,
   });
-
-
+  
 
   res.status(201).json({
     success: true, data: newProduct,
@@ -69,7 +76,19 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   }
 
   const editProduct = {
-    name: req.body.name, phone: req.body.phone, productName: req.body.productName, count: req.body.count,
+    name:req.body.name,
+    category: category._id,
+    images: '/uploads' + req.file.filename,
+    weight:req.body.weight,
+    warranty:req.body.warranty,
+    size:req.body.size,
+    capacity:req.body.capacity,
+    description:req.body.description,
+    cost:req.body.cost,
+    newCost:req.body.newCost,
+    discount:req.body.discount,
+    new:req.body.new,
+    status:req.body.status,
   };
 
   const updatedProduct = await Product.findByIdAndUpdate(req.params.id, editProduct, {

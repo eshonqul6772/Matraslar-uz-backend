@@ -5,43 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fbd9c2-726a-4c18-beb5-4f5c33e3c822" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/conatct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/joi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middlewares/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/admin/conatct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/admin/location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/conatct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/aec55a2a-43e0-4ddb-b0aa-19fa86b57d1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aec55a2a-43e0-4ddb-b0aa-19fa86b57d1e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/location.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/conatct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/conatct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tecnolgy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tecnolgy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/async.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/async.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/joi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/joi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Technologies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Technologies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/location.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/conatct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/conatct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/admin/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/tecnolgy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/tecnolgy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/client/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/18908387006ed7b08d899a1fd621cb1a" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +144,7 @@
       <workItem from="1711471908757" duration="7021000" />
       <workItem from="1711516242918" duration="13760000" />
       <workItem from="1711534108962" duration="4811000" />
+      <workItem from="1711546131631" duration="6088000" />
     </task>
     <servers />
   </component>

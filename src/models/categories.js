@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
 
-const reqString = {type:String, require:true}
+const { STATUS_TYPE } = require('../utils/constants');
+
+
+const reqString = { type: String, require: true };
 
 const categoriesSchema = new mongoose.Schema({
   category: reqString,
-   status: {
+  status: {
     type: String,
-    enum: ["ACTIVE", "INACTIVE"],
-    default:"ACTIVE"
-  }
+    enum: Object.values(STATUS_TYPE),
+    default: STATUS_TYPE.ACTIVE,
+  },
 }, { timestamps: true, versionKey: false });
 
 module.exports = mongoose.model('Category', categoriesSchema);

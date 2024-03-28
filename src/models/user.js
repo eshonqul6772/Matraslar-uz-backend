@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { STATUS_TYPE } = require('../utils/constants');
 
 const reqString = { type: String, require: true }
 
@@ -24,9 +25,9 @@ const userSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ["ACTIVE", "INACTIVE"],
-        default: true
-    }
+        enum: Object.values(STATUS_TYPE),
+        default: STATUS_TYPE.ACTIVE,
+    },
 }, { timestamps: true, versionKey: false })
 
 

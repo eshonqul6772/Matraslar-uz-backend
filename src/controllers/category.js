@@ -7,13 +7,15 @@ const asyncHandler = require('../middlewares/async');
 exports.createCategory = asyncHandler(async (req, res, next) => {
 
   const newCategory = new Category({
-    category:req.body.category, status,
+    category:req.body.category,
+    status:req.body.status,
   });
 
   const saveCategory = await newCategory.save();
 
   res.status(201).json({
-    success: true, data: saveCategory,
+    success: true,
+    category: saveCategory,
   });
 });
 
@@ -32,7 +34,7 @@ exports.getCategory = asyncHandler(async (req, res, next) => {
     pageCount: Math.ceil(total / limit),
     currentPage: page,
     nextPage: Math.ceil(total / limit) < page + 1 ? null : page + 1,
-    data: category,
+    category: category,
   });
 });
 
@@ -42,7 +44,8 @@ exports.getCategoryById = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse('Category not found', 404));
   }
   res.status(200).json({
-    success: true, data: category,
+    success: true,
+    category: category,
   });
 });
 
@@ -64,7 +67,8 @@ exports.updateCategory = asyncHandler(async (req, res, next) => {
   });
 
   res.status(200).json({
-    success: true, data: updatedCategory,
+    success: true,
+    category: updatedCategory,
   });
 
 });

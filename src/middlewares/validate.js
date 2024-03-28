@@ -18,7 +18,7 @@ exports.validateCarousel = (req, res, next) => {
     res.status(403)
       .json({ message: "image is required" })
   } else if (data.error) {
-    fs.unlinkSync(path.join(process.cwd(), "src", "uploads", "carousel", req.file.filename));
+    fs.unlinkSync(path.join(process.cwd(), "src", "uploads", req.file.filename));
 
     res.status(403)
       .json({ message: data.error.details[0].message });
@@ -69,13 +69,13 @@ exports.validateCategory = (req, res, next) => {
 
 exports.validateProducts = (req, res, next) => {
   const data = productsSchema.validate(req.body);
-  if (!req.files.length) {
+  if (!req.file) {
     res.status(403)
       .json({ message: "images are required" })
   } else if (data.error) {
-    for (let image of req.files) {
-      fs.unlinkSync(path.join(process.cwd(), "src", "uploads", "products", image.filename));
-    }
+    // for (let image of req.file) {
+    //   fs.unlinkSync(path.join(process.cwd(), "src", "uploads", "products", image.filename));
+    // }
 
     res.status(403)
       .json({ message: data.error.details[0].message });
