@@ -11,9 +11,6 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
     next(new ErrorResponse('category nod found', 403))
   }
 
-  console.log(req.body)
-
-  console.log("Dwwdedwe")
 
   const newProduct =await Product.create({
     name:req.body.name,
@@ -38,7 +35,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 });
 
 
-exports.getProduct = asyncHandler(async (req, res, next) => {
+exports.getProduct = asyncHandler(async (req, res) => {
   const pageLimit = process.env.DEFAULT_PAGE_LIMIT || 5;
   const limit = parseInt(req.query.limit || pageLimit);
   const page = parseInt(req.query.page || 1);
@@ -103,7 +100,7 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
 });
 
 
-exports.removeProduct = asyncHandler(async (req, res, next) => {
+exports.removeProduct = asyncHandler(async (req, res) => {
   await Product.findByIdAndDelete(req.params.id);
 
   res.status(200).json({

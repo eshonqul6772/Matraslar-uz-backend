@@ -92,7 +92,7 @@ exports.validateTechnology = (req, res, next) => {
       .json({ message: data.error.details[0].message });
   } else {
     next();
-  };
+  }
 };
 
 exports.validateAddress = (req, res, next) => {

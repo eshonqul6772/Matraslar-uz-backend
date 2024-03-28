@@ -4,7 +4,7 @@ const ErrorResponse = require('../utils/ErrorResponse');
 const asyncHandler = require('../middlewares/async');
 
 
-exports.createCategory = asyncHandler(async (req, res, next) => {
+exports.createCategory = asyncHandler(async (req, res) => {
 
   const newCategory = new Category({
     category:req.body.category,
@@ -19,7 +19,7 @@ exports.createCategory = asyncHandler(async (req, res, next) => {
   });
 });
 
-exports.getCategory = asyncHandler(async (req, res, next) => {
+exports.getCategory = asyncHandler(async (req, res) => {
   const pageLimit = process.env.DEFAULT_PAGE_LIMIT || 5;
   const limit = parseInt(req.query.limit || pageLimit);
   const page = parseInt(req.query.page || 1);
@@ -73,7 +73,7 @@ exports.updateCategory = asyncHandler(async (req, res, next) => {
 
 });
 
-exports.removeCategory = asyncHandler(async (req, res, next) => {
+exports.removeCategory = asyncHandler(async (req, res) => {
     await Category.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
