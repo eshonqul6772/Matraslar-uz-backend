@@ -4,23 +4,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4fbd9c2-726a-4c18-beb5-4f5c33e3c822" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aec55a2a-43e0-4ddb-b0aa-19fa86b57d1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aec55a2a-43e0-4ddb-b0aa-19fa86b57d1e.xml" afterDir="false" />
+    <list default="true" id="d4fbd9c2-726a-4c18-beb5-4f5c33e3c822" name="Changes" comment="add validate">
+      <change afterPath="$PROJECT_DIR$/src/controllers/banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/transiltaion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/translation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/translation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/client/banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/client/category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/client/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/client/location.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/client/prdocut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/client/technology.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/conatct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/conatct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/joi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/joi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/tecnolgy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/technology.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middlewares/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Technologies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Technologies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Technologies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/technology.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/conatct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/conatct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474096992.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474211786.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474250384.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474268700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474289378.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474869378.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474922645.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474931706.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474934680.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474953956.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474997852.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711536265348.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711549774033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562257800.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562335406.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562383312.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562463902.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562524741.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562675282.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562764515.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562811506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562827715.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562844506.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562874852.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562891908.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562919522.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711562999412.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563078331.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563135834.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563230747.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563519708.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563567064.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563655396.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563740877.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563754790.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563825086.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711563955522.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564024150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564034046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564041455.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564097031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564098016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564098480.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564098886.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564099246.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564244991.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564253224.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564322855.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564362021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564566241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/tecnolgy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/technology.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/client/conatct.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/client/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +100,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -58,36 +119,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;12.22.9&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;12.20.55&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-uz-backend/src/routes/admin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/369/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "12.22.9",
+    "javascript.nodejs.core.library.typings.version": "12.20.55",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/home/eshonqul/Eshonqul/Private Project/mehrob/mehrob-front-client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/eshonqul/Eshonqul/Projects/NodeJs/Matraslar-backend/node_modules/prettier",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "ts.external.directory.path": "/snap/webstorm/369/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
     ],
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;
+    "DatabaseDriversLRU": [
+      "mongo"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/routes/admin" />
@@ -145,10 +206,36 @@
       <workItem from="1711516242918" duration="13760000" />
       <workItem from="1711534108962" duration="4811000" />
       <workItem from="1711546131631" duration="6088000" />
+      <workItem from="1711626205791" duration="137000" />
+      <workItem from="1711626505906" duration="3059000" />
+      <workItem from="1711644831559" duration="3154000" />
+      <workItem from="1711649494652" duration="110000" />
+      <workItem from="1711686925673" duration="14102000" />
     </task>
+    <task id="LOCAL-00001" summary="add validate">
+      <option name="closed" value="true" />
+      <created>1711626227091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711626227091</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add validate">
+      <option name="closed" value="true" />
+      <created>1711626317673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711626317673</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add validate" />
+    <option name="LAST_COMMIT_MESSAGE" value="add validate" />
   </component>
 </project>

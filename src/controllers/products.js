@@ -30,7 +30,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
   
 
   res.status(201).json({
-    success: true, data: newProduct,
+    success: true, products: newProduct,
   });
 });
 
@@ -50,7 +50,7 @@ exports.getProduct = asyncHandler(async (req, res) => {
     pageCount: Math.ceil(total / limit),
     currentPage: page,
     nextPage: Math.ceil(total / limit) < page + 1 ? null : page + 1,
-    data: products,
+    products: products,
   });
 });
 
@@ -94,7 +94,7 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
 
 
   res.status(200).json({
-    success: true, data: updatedProduct,
+    success: true, products: updatedProduct,
   });
 
 });

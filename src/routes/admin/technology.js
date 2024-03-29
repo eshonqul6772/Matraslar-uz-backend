@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const {createTechnology,getTechnology,getTechnologyById, updateTechnology,removeTechnology  } = require('../../controllers/tecnolgy.js');
+const {createTechnology,getTechnology,getTechnologyById, updateTechnology,removeTechnology  } = require('../../controllers/technology.js');
 const { checkAuth } = require('../../middlewares/auth');
 
 

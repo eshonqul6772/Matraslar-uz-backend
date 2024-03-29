@@ -37,8 +37,27 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse('Invalid Credentials', 401));
   }
   const token = user.generateJwtToken();
-
   res.status(200).json({
     success: true, data: user, token,
+  });
+});
+
+
+exports.getProfile = asyncHandler(async (req, res) => {
+  const profile = await User.findOne({ username : 'admin' });
+
+  // const newProfile = {
+  //   firstName: profile.firstName,
+  //   lastName: profile.lastName,
+  //   username: profile.username,
+  //   createdAt: profile.createdAt,
+  //   updatedAt: profile.updatedAt,
+  //   role: profile.role,
+  //   status: profile.status,
+  // };
+
+  console.log(profile)
+  res.status(200).json({
+    success: true, profile,
   });
 });

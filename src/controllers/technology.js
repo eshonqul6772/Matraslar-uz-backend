@@ -1,4 +1,4 @@
-const Technology = require("../models/Technologies");
+const Technology = require("../models/technology");
 
 const ErrorResponse = require("../utils/ErrorResponse");
 const asyncHandler = require('../middlewares/async');

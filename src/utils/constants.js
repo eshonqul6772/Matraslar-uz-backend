@@ -1,4 +1,9 @@
 exports.STATUS_TYPE ={
   ACTIVE:"ACTIVE",
   INACTIVE:"INACTIVE"
+};
+
+exports.LANG_TYPE = {
+  ADMIN:"ADMIN",
+  CLIENT:"CLIENT"
 }

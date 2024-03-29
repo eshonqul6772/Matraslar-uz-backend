@@ -7,10 +7,7 @@ const orderSchema = new mongoose.Schema({
   name: reqString,
   phone: reqString,
   productName: reqString,
-  count: {
-    type: Number,
-    required: true,
-  },
+  count: reqString,
   status: {
     type: String,
     enum: Object.values(STATUS_TYPE),

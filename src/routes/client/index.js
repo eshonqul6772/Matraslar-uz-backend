@@ -1,8 +1,18 @@
 const orderRoutes = require('./orders');
-const contactRoutes = require('./conatct');
+const contactRoutes = require('./contact');
+const categoryRoutes = require('./category');
+const technologyRoutes = require('./technology');
+const productRoutes = require('./prdocut');
+const bannerRoutes = require('./banner');
+const locationRoutes = require('./location');
 
 
 module.exports = [
-    orderRoutes,
-  contactRoutes
-]
+  orderRoutes,
+  contactRoutes,
+  categoryRoutes,
+  technologyRoutes,
+  productRoutes,
+  bannerRoutes,
+  locationRoutes,
+];
