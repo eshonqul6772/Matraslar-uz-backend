@@ -4,6 +4,11 @@ exports.STATUS_TYPE ={
 };
 
 exports.LANG_TYPE = {
-  ADMIN:"ADMIN",
-  CLIENT:"CLIENT"
+  ADMIN_CABINET:"ADMIN_CABINET",
+  CLIENT_CABINET:"CLIENT_CABINET"
 }
+
+exports.IMAGE_MODEL_OBJECT = {
+  name: String,
+  uuid: String,
+};

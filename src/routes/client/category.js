@@ -1,10 +1,9 @@
 const router = require('express').Router();
 
 const {
-  getCategory,
+  getCategoryClient
 } = require('../../controllers/category');
-
-router.get('/category', getCategory);
+router.get('/category', getCategoryClient);
 
 
 module.exports = router;

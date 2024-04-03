@@ -25,30 +25,33 @@ exports.getBanner = asyncHandler(async (req, res) => {
 });
 
 
-exports.createBanner = asyncHandler(async (req, res) => {
-  const newBanner = await new Banner({
+
+exports.createBanner = asyncHandler(async (req, res, next) => {
+
+
+  const newProduct = await Banner.create({
     title: req.body.title,
-    images: '/uploads/' + req.file.filename,
+    images: 'uploads/' + req.file.filename,
   });
 
-  const saveBanner = await newBanner.save();
+  console.log(newProduct)
 
-  res.status(200).json({
-    success: true, banner: saveBanner,
+
+  res.status(201).json({
+    success: true, products: newProduct,
   });
 });
 
-exports.updateBanner = asyncHandler(async (req, res,next) => {
+exports.updateBanner = asyncHandler(async (req, res, next) => {
 
   const banner = await Banner.findById(req.params.id);
 
   if (!banner) {
-    return next(new ErrorResponse('Order not found', 400));
+    return next(new ErrorResponse('Banner not found', 400));
   }
 
   const editBanner = {
     title: req.body.title,
-    images: '/uploads' + req.file.filename,
     status: req.body.status,
   };
 

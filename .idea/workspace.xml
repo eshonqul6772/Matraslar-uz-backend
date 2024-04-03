@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4fbd9c2-726a-4c18-beb5-4f5c33e3c822" name="Changes" comment="add validate">
-      <change afterPath="$PROJECT_DIR$/src/controllers/banner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/transiltaion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/banner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/translation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/admin/banner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/admin/translation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/banner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/prdocut.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/client/technology.js" afterDir="false" />
+    <list default="true" id="d4fbd9c2-726a-4c18-beb5-4f5c33e3c822" name="Changes" comment="add banner model">
+      <change afterPath="$PROJECT_DIR$/src/controllers/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middlewares/chekIsAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middlewares/convertImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/file.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/admin/references.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tecnolgy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/technology.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/joi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/joi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/async.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/async.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middlewares/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Technologies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/technology.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474096992.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474211786.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711474250384.png" beforeDir="false" />
@@ -74,12 +73,10 @@
       <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564322855.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564362021.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/uploads/images-1711564566241.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/admin/tecnolgy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/technology.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/client/conatct.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/client/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/admin/translation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/admin/translation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/client/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/client/category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +125,7 @@
     "javascript.nodejs.core.library.configured.version": "12.22.9",
     "javascript.nodejs.core.library.typings.version": "12.20.55",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/home/eshonqul/Eshonqul/Private Project/mehrob/mehrob-front-client",
+    "last_opened_file_path": "/home/eshonqul/Eshonqul/Template/portfolio/project_p",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -210,7 +207,13 @@
       <workItem from="1711626505906" duration="3059000" />
       <workItem from="1711644831559" duration="3154000" />
       <workItem from="1711649494652" duration="110000" />
-      <workItem from="1711686925673" duration="14102000" />
+      <workItem from="1711686925673" duration="18792000" />
+      <workItem from="1711711101313" duration="457000" />
+      <workItem from="1711711779550" duration="1063000" />
+      <workItem from="1711779969377" duration="44000" />
+      <workItem from="1711780044732" duration="28000" />
+      <workItem from="1711899740769" duration="2527000" />
+      <workItem from="1711959644869" duration="12383000" />
     </task>
     <task id="LOCAL-00001" summary="add validate">
       <option name="closed" value="true" />
@@ -228,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711626317673</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add banner model">
+      <option name="closed" value="true" />
+      <created>1711703123494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711703123494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +247,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add validate" />
-    <option name="LAST_COMMIT_MESSAGE" value="add validate" />
+    <MESSAGE value="add banner model" />
+    <option name="LAST_COMMIT_MESSAGE" value="add banner model" />
   </component>
 </project>

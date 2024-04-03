@@ -3,6 +3,7 @@ const { STATUS_TYPE } = require('../utils/constants');
 
 exports.carouselSchema = Joi.object({
   title: Joi.string().not(''),
+  images: Joi.object().not(''),
   status: Joi.string().valid(...Object.values(STATUS_TYPE)),
 });
 
@@ -29,7 +30,6 @@ exports.categorySchema = Joi.object({
   status: Joi.string().valid(...Object.values(STATUS_TYPE)).not(''),
 });
 
-
 exports.productsSchema = Joi.object({
   name: Joi.string().not(''),
   category: Joi.string().not(''),
@@ -38,7 +38,7 @@ exports.productsSchema = Joi.object({
   warranty: Joi.string().not(''),
   size: Joi.string().min(3).not(''),
   capacity: Joi.string().not(''),
-  body: Joi.string().not(''),
+  description: Joi.string().not(''),
   cost: Joi.string().not(''),
   newCost: Joi.string().not(''),
   discount: Joi.string().not(''),
@@ -63,6 +63,5 @@ exports.addressSchema = Joi.object().keys({
 });
 
 exports.loginSchema = Joi.object({
-  username: Joi.string().not('').required(),
-  password: Joi.string(),
+  username: Joi.string().not('').required(), password: Joi.string(),
 });

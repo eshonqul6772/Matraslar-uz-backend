@@ -7,27 +7,27 @@ const asyncHandler = require('../middlewares/async');
 exports.createProduct = asyncHandler(async (req, res, next) => {
   const category = await Category.findOne({ category: req.body.category });
 
-  if(!category){
-    next(new ErrorResponse('category nod found', 403))
+  if (!category) {
+    next(new ErrorResponse('category nod found', 403));
   }
 
 
-  const newProduct =await Product.create({
-    name:req.body.name,
+  const newProduct = await Product.create({
+    name: req.body.name,
     category: category._id,
-    images: '/uploads' + req.file.filename,
-    weight:req.body.weight,
-    warranty:req.body.warranty,
-    size:req.body.size,
-    capacity:req.body.capacity,
-    description:req.body.description,
-    cost:req.body.cost,
-    newCost:req.body.newCost,
-    discount:req.body.discount,
-    new:req.body.new,
-    status:req.body.status,
+    images: 'uploads/' + req.file.filename,
+    weight: req.body.weight,
+    warranty: req.body.warranty,
+    size: req.body.size,
+    capacity: req.body.capacity,
+    description: req.body.description,
+    cost: req.body.cost,
+    newCost: req.body.newCost,
+    discount: req.body.discount,
+    new: req.body.new,
+    status: req.body.status,
   });
-  
+
 
   res.status(201).json({
     success: true, products: newProduct,
@@ -73,19 +73,19 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   }
 
   const editProduct = {
-    name:req.body.name,
+    name: req.body.name,
     category: category._id,
     images: '/uploads' + req.file.filename,
-    weight:req.body.weight,
-    warranty:req.body.warranty,
-    size:req.body.size,
-    capacity:req.body.capacity,
-    description:req.body.description,
-    cost:req.body.cost,
-    newCost:req.body.newCost,
-    discount:req.body.discount,
-    new:req.body.new,
-    status:req.body.status,
+    weight: req.body.weight,
+    warranty: req.body.warranty,
+    size: req.body.size,
+    capacity: req.body.capacity,
+    description: req.body.description,
+    cost: req.body.cost,
+    newCost: req.body.newCost,
+    discount: req.body.discount,
+    new: req.body.new,
+    status: req.body.status,
   };
 
   const updatedProduct = await Product.findByIdAndUpdate(req.params.id, editProduct, {

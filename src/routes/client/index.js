@@ -5,6 +5,7 @@ const technologyRoutes = require('./technology');
 const productRoutes = require('./prdocut');
 const bannerRoutes = require('./banner');
 const locationRoutes = require('./location');
+const imageRoutes = require('./images')
 
 
 module.exports = [
@@ -15,4 +16,5 @@ module.exports = [
   productRoutes,
   bannerRoutes,
   locationRoutes,
+  imageRoutes
 ];

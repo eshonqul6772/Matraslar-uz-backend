@@ -7,7 +7,8 @@ const technologyRoutes = require('./technology');
 const locationRoutes = require('./location');
 const contactRoutes = require('./conatct');
 const bannerRoutes = require('./banner');
-const transitionRoutes =  require('./translation')
+const transitionRoutes = require('./translation');
+
 
 
 module.exports = [
@@ -20,5 +21,6 @@ module.exports = [
   locationRoutes,
   contactRoutes,
   bannerRoutes,
-  transitionRoutes
+  transitionRoutes,
+  // fileDownlandRoutes,
 ];

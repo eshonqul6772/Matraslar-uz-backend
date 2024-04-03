@@ -12,7 +12,7 @@ const { checkAuth } = require('../../middlewares/auth');
 const { validateProducts } = require('../../middlewares/validate');
 const upload = require('../../utils/fileUploader');
 
-router.post('/products/:id', checkAuth, upload.single('images'), validateProducts, createProduct);
+router.post('/products/:id', checkAuth, upload.single('images'), createProduct);
 router.get('/products', checkAuth, validateProducts, getProduct);
 router.get('/products/:id', checkAuth, validateProducts, getProductById);
 router.put('/products/:id', checkAuth, validateProducts, updateProduct);

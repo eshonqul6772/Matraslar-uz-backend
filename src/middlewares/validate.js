@@ -73,7 +73,7 @@ exports.validateProducts = (req, res, next) => {
       .json({ message: 'images are required' });
   } else if (data.error) {
 
-    fs.unlinkSync(path.join(process.cwd(), 'src', 'uploads', 'products', image.filename));
+    // fs.unlinkSync(path.join(process.cwd(), 'src', 'uploads', 'products', image.filename));
 
     res.status(403)
       .json({ message: data.error.details[0].message });
@@ -81,6 +81,7 @@ exports.validateProducts = (req, res, next) => {
     next();
   }
 };
+
 
 
 exports.validateTechnology = (req, res, next) => {
